@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BASIC SEO for 404 -->
+    <title>404 Not Found — Ryusei Ueno</title>
+    <meta name="description" content="The page you attempted to trace is not an entity but an effect of missing associations.">
+    <meta name="robots" content="noindex,follow,noarchive">
+    <meta name="author" content="Ryusei Ueno">
+    <!-- No canonical on 404 -->
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ryusei Ueno">
+    <meta property="og:url" content="https://ryusei-ueno.github.io/website/404.html">
+    <meta property="og:title" content="404 — Not Found">
+    <meta property="og:description" content="In actor-network terms, the link you followed failed to enroll its allies; the network did not hold.">
+    <meta property="og:image" content="https://ryusei-ueno.github.io/website/img/bg.jpg">
+    <meta property="og:image:alt" content="404 error: missing associations in a network diagram">
+    <meta property="og:locale" content="en_US">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="404 — Not Found">
+    <meta name="twitter:description" content="In actor-network terms, the link you followed failed to enroll its allies; the network did not hold.">
+    <meta name="twitter:image" content="https://ryusei-ueno.github.io/website/img/bg.jpg">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./src/general.css">
+    <link rel="stylesheet" href="./src/404.css">
+</head>
+
+<body>
+    <header>
+        <a class="site-title" href="./" rel="home">RYUSEI UENO</a>
+        <details class="menu" open>
+            <summary class="menu-toggle" aria-controls="site-nav" aria-label="Menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </summary>
+            <nav id="site-nav" class="primary-nav" aria-label="Primary">
+                <ul class="nav-list">
+                    <li><a href="./" class="nav-item">HOME</a></li>
+                    <li><a href="./src/about.html" class="nav-item">ABOUT</a></li>
+                    <li><a href="./src/media.html" class="nav-item">MEDIA</a></li>
+                    <li><a href="./src/contact.html" class="nav-item">CONTACT</a></li>
+                </ul>
+            </nav>
+        </details>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <!-- 404 -->
+        <section class="not-found" role="region" aria-labelledby="nf-heading">
+            <div class="nf-grid">
+                <div>
+                    <h1 class="nf-code" aria-hidden="true">404</h1>
+                    <h2 id="nf-heading" class="nf-heading">Not Found</h2>
+                    <p class="nf-lede">
+                        The page you attempted to trace is not an entity but an <em>effect</em> of missing associations.
+                        In actor-network terms, the link you followed failed to enroll its allies; the network did not hold.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="visually-hidden" id="trace-title">Trace</h3>
+                    <div class="nf-trace" role="group" aria-labelledby="trace-title" aria-live="polite">
+                        <dl>
+                            <dt>Requested path</dt>
+                            <dd><code id="nf-path">—</code></dd>
+
+                            <dt>Referrer</dt>
+                            <dd><code id="nf-referrer">—</code></dd>
+
+                            <dt>Timestamp</dt>
+                            <dd><time id="nf-ts" datetime="">—</time></dd>
+
+                            <dt>Client</dt>
+                            <dd><code id="nf-ua">—</code></dd>
+                        </dl>
+                    </div>
+                    <noscript>
+                        <p class="nf-lede">Enable JavaScript to see a short trace (path, referrer, and time).</p>
+                    </noscript>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <small>&copy; <time datetime="2025">2025</time> Ryusei Ueno. All rights reserved.</small>
+        </p>
+    </footer>
+
+    <script src="./src/general.js" defer></script>
+    <script src="./src/404.js"></script>
+</body>
+</html>

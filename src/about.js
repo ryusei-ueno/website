@@ -1,6 +1,6 @@
 const KEYWORDS = [
     "Sociology of Associations",
-    "Actor–Network Theory",
+    "Actor-Network Theory",
     "Posthumanism",
     "Reassembling the Social",
   ];

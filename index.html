@@ -3,14 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BASIC SEO -->
     <title>Ryusei Ueno - Reassembling the Social</title>
-    <meta name="description" content="Posthumanism and Actor-Network Theory in practice: tracing society as an effect of heterogeneous associations." />
-    <link rel="stylesheet" href="/src/general.css">
-    <link rel="stylesheet" href="/src/index.css">
+    <meta name="description" content="Posthumanism and Actor-Network Theory in practice: tracing society as an effect of heterogeneous associations.">
+    <meta name="keywords" content="Ryusei Ueno, sociology of associations, actor-network theory, ANT, posthumanism, science and technology studies, STS, AI in social sciences, reassembling the social">
+    <meta name="author" content="Ryusei Ueno">
+    <link rel="canonical" href="https://ryusei-ueno.github.io/website/">
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ryusei Ueno">
+    <meta property="og:url" content="https://ryusei-ueno.github.io/website/">
+    <meta property="og:title" content="Ryusei Ueno — Reassembling the Social">
+    <meta property="og:description" content="Posthumanism and Actor-Network Theory in practice: tracing society as an effect of heterogeneous associations.">
+    <meta property="og:image" content="https://ryusei-ueno.github.io/website/img/bg.jpg">
+    <meta property="og:image:alt" content="Abstract network of human and nonhuman nodes illustrating a sociology of associations">
+    <meta property="og:locale" content="en_US">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ryusei Ueno — Reassembling the Social">
+    <meta name="twitter:description" content="Posthumanism and Actor-Network Theory in practice: tracing society as an effect of heterogeneous associations.">
+    <meta name="twitter:image" content="https://ryusei-ueno.github.io/website/img/bg.jpg">
+
+    <!-- JSON-LD: WebSite + WebPage + Person -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://ryusei-ueno.github.io/website/#website",
+            "url": "https://ryusei-ueno.github.io/website/",
+            "name": "Ryusei Ueno",
+            "inLanguage": "en",
+            "description": "Posthumanism and Actor-Network Theory in practice: tracing society as an effect of heterogeneous associations.",
+            "publisher": { "@id": "https://ryusei-ueno.github.io/website/#person" }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://ryusei-ueno.github.io/website/#webpage",
+            "url": "https://ryusei-ueno.github.io/website/",
+            "name": "Reassembling the Social",
+            "isPartOf": { "@id": "https://ryusei-ueno.github.io/website/#website" },
+            "about": { "@id": "https://ryusei-ueno.github.io/website/#person" },
+            "inLanguage": "en",
+            "description": "Seeing the social as it assembles, not as it should.",
+            "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://ryusei-ueno.github.io/website/img/bg.jpg",
+            "width": 1200,
+            "height": 630
+            },
+            "dateModified": "2025-08-25"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://ryusei-ueno.github.io/website/#person",
+            "name": "Ryusei Ueno",
+            "url": "https://ryusei-ueno.github.io/website/",
+            "image": "https://ryusei-ueno.github.io/website/img/bg.jpg",
+            "jobTitle": "Sociologist",
+            "homeLocation": { "@type": "Country", "name": "Japan" },
+            "knowsAbout": [
+            "Actor-Network Theory",
+            "Posthumanism",
+            "Sociology of Associations",
+            "Science and Technology Studies",
+            "AI in Social Sciences",
+            "Interdisciplinarity"
+            ],
+            "description": "A sociologist tracing the social as an effect of heterogeneous associations."
+        }
+        ]
+    }
+    </script>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./src/general.css">
+    <link rel="stylesheet" href="./src/index.css">
 </head>
+
 <body>
     <header>
-        <a class="site-title" href="/" rel="home">RYUSEI UENO</a>
+        <a class="site-title" href="./" rel="home">RYUSEI UENO</a>
         <details class="menu" open>
             <summary class="menu-toggle" aria-controls="site-nav" aria-label="Menu">
                 <span class="bar" aria-hidden="true"></span>
@@ -19,10 +97,10 @@
             </summary>
             <nav id="site-nav" class="primary-nav" aria-label="Primary">
                 <ul class="nav-list">
-                    <li><a href="/" class="nav-item">HOME</a></li>
-                    <li><a href="/src/about.html" class="nav-item">ABOUT</a></li>
-                    <li><a href="/src/media.html" class="nav-item">MEDIA</a></li>
-                    <li><a href="/src/contact.html" class="nav-item">CONTACT</a></li>
+                    <li><a href="./" class="nav-item">HOME</a></li>
+                    <li><a href="./src/about.html" class="nav-item">ABOUT</a></li>
+                    <li><a href="./src/media.html" class="nav-item">MEDIA</a></li>
+                    <li><a href="./src/contact.html" class="nav-item">CONTACT</a></li>
                 </ul>
             </nav>
         </details>
@@ -35,7 +113,7 @@
             <div class="message">
                 <h1 id="hero-title">Reassembling the Social</h1>
                 <p>Seeing the social as it assembles, not as it should.</p>
-                <p><a class="button" href="/src/about.html">SEE RESEARCHER</a></p>
+                <p><a class="button" href="./src/about.html">SEE RESEARCHER</a></p>
             </div>
         </section>
 
@@ -71,7 +149,7 @@
                 <li>
                     <article class="perspective">
                         <figure>
-                            <img src="/img/society.png" alt="A diagrammatic view of social relations forming a network" />
+                            <img src="./img/society.png" alt="A diagrammatic view of social relations forming a network" />
                             <figcaption>
                                 <h3>Sociology</h3>
                                 <p>Seeing society as assembled from relations.</p>
@@ -82,7 +160,7 @@
                 <li>
                     <article class="perspective">
                         <figure>
-                            <img src="/img/posthuman.png" alt="Human and nonhuman actors represented symmetrically" />
+                            <img src="./img/posthuman.png" alt="Human and nonhuman actors represented symmetrically" />
                             <figcaption>
                                 <h3>Posthumanism</h3>
                                 <p>Treating human and nonhuman actors symmetrically.</p>
@@ -93,7 +171,7 @@
                 <li>
                     <article class="perspective">
                         <figure>
-                            <img src="/img/network.png" alt="Nodes and edges illustrating an actor-network" />
+                            <img src="./img/network.png" alt="Nodes and edges illustrating an actor-network" />
                             <figcaption>
                                 <h3>Actor-Network Theory</h3>
                                 <p>Following actors to trace how associations assemble the social.</p>
@@ -104,7 +182,7 @@
                 <li>
                     <article class="perspective">
                         <figure>
-                            <img src="/img/book.png" alt="A book indicating cross-domain work" />
+                            <img src="./img/book.png" alt="A book indicating cross-domain work" />
                             <figcaption>
                                 <h3>Interdisciplinarity</h3>
                                 <p>Connecting theory, fieldwork, and computation across domains.</p>
@@ -121,7 +199,7 @@
             <div class="message">
                 <h2 id="cta-title">Ryusei Ueno</h2>
                 <p>Ryusei Ueno (he/him) is a sociologist from Japan. Learn more about his work by clicking the button below.</p>
-                <p><a class="button" href="/src/about.html">SEE RESEARCHER</a></p>
+                <p><a class="button" href="./src/about.html">SEE RESEARCHER</a></p>
             </div>
         </aside>
     </main>
@@ -132,6 +210,6 @@
         </p>
     </footer>
 
-    <script src="/src/general.js" defer></script>
+    <script src="./src/general.js" defer></script>
 </body>
 </html>

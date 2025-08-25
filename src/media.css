@@ -35,9 +35,9 @@
     filter: brightness(50%) blur(3px);
 }
 
-.bg1 {background-image: url("/img/expo.png");}
-.bg2 {background-image: url("/img/peace.jpg");}
-.bg3 {background-image: url("/img/constitution.jpg");}
+.bg1 {background-image: url("../img/expo.png");}
+.bg2 {background-image: url("../img/peace.jpg");}
+.bg3 {background-image: url("../img/constitution.jpg");}
 
 .slide-text {
     position: absolute;
