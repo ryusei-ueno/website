@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Moon";
+    src: url("/fonts/MoonLight.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Moon";
+    src: url("/fonts/MoonBold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Moon", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    font-size: 15px;
+    --color-offblack: rgb(24, 24, 24);
+    --color-blue: rgb(26, 4, 255);
+    --height-header: 60px;
+    --content-max: 1000px;
+    --gutter: 30px;  
+}
+
+html, body{
+    background-color: black;
+    overflow-x: clip;
+    scrollbar-gutter: stable both-edges;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--height-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border-bottom: 1px solid var(--color-offblack);
+    z-index: 999;
+}
+
+.site-title {
+    margin-left: 30px;
+    display: flex;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.nav-item {
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+@media (min-width: 601px) {
+    .menu > summary { display: none; }
+    .menu nav { display: block !important; position: static; }
+}
+
+@media (max-width: 600px) {
+    .menu > summary {
+        list-style: none;
+        cursor: pointer;
+        display: flex;
+        flex-flow: column;
+        gap: .35rem;
+        border: 0;
+        background: transparent;
+        margin-right: 30px;
+    }
+    .menu > summary::-webkit-details-marker { display: none; }
+
+    .menu nav {
+        display: none;
+        position: absolute;
+        top: var(--height-header);
+        left: 0;
+        right: 0;
+        width: auto;
+    }
+    .menu[open] nav { display: block; }
+
+    /* Hamburger Animation */
+    .menu .bar { width: 20px; height: 2px; background: white; transition: all .3s ease; }
+    .menu[open] .bar:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu[open] .bar:nth-child(2) { opacity: 0; }
+    .menu[open] .bar:nth-child(3) { transform: rotate(-45deg) translate(5.5px, -5.5px); }
+
+    #site-nav {
+        position: absolute;
+        top: var(--height-header);
+        left: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-flow: column;
+        margin-right: 0;
+    }
+    .nav-item {
+        display: flex;
+        margin-left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid var(--color-offblack);
+    }
+}
+
+/* MAIN */
+main {
+    position: relative;
+    top: var(--height-header);
+}
+
+/* Footer */
+footer {
+    position: relative;
+    top: var(--height-header);
+    margin-top: 60px;
+    padding: 15px 30px;
+    border-top: 1px solid var(--color-offblack);
+}
