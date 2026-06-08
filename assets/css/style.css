@@ -1,0 +1,337 @@
+/* ==========================================================================
+   style.css (共通スタイル)
+   ========================================================================== */
+
+/* --- 1. 変数定義 --- */
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #eeeeee;
+    --line-color: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+/* --- 2. ベーススタイル & リセット --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- ページ遷移（フェードインエフェクト） --- */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+}
+
+.container > * {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.page-loaded .container > * {
+    opacity: 1;
+    transform: none;
+}
+
+/* --- 3. 背景レイヤー & ギミック --- */
+/* 線形グリッド（重複を統合） */
+.bg-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: 
+        linear-gradient(var(--line-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* マウス追従エフェクト（肉球型アイコン） */
+#mouse-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+    pointer-events: none;
+    transform: translate(calc(var(--mouse-x) - 50%), calc(var(--mouse-y) - 50%)) rotate(-15deg);
+    background: 
+        radial-gradient(ellipse 4px 6px at 18% 52%, #ffffff 95%, transparent 100%),
+        radial-gradient(ellipse 5px 7px at 38% 28%, #ffffff 95%, transparent 100%),
+        radial-gradient(ellipse 5px 7px at 62% 28%, #ffffff 95%, transparent 100%),
+        radial-gradient(ellipse 4px 6px at 82% 52%, #ffffff 95%, transparent 100%),
+        radial-gradient(ellipse 10px 10px at 50% 72%, #ffffff 95%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #mouse-glow.is-active {
+        opacity: 0.8;
+    }
+}
+
+/* --- 4. 共通コンポーネント --- */
+/* グラスモーフィズムパネル */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* 共通セクション見出し */
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--line-color);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 共通線形ボタン */
+.btn-linear {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--text-color);
+    border-radius: 2px;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-linear:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* --- 5. ヘッダー & ナビゲーション --- */
+.glass-header {
+    position: sticky;
+    top: 0;
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line-color);
+    padding: 1rem 2rem;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.glass-header nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    opacity: 0.6;
+}
+
+/* モバイル用メニューボタン */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 101;
+    padding: 0;
+}
+
+.shape-square {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-color);
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+}
+
+.shape-cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.shape-cross::before,
+.shape-cross::after {
+    content: '';
+    position: absolute;
+    background-color: var(--text-color);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shape-cross::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50%) scaleX(0);
+}
+
+.shape-cross::after {
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    transform: translateX(-50%) scaleY(0);
+}
+
+/* メニューアクティブ時 */
+.menu-btn.is-active .shape-square {
+    transform: translate(-50%, -50%) rotate(90deg) scale(0);
+    opacity: 0;
+}
+
+.menu-btn.is-active .shape-cross::before {
+    transform: translateY(-50%) scaleX(1);
+}
+
+.menu-btn.is-active .shape-cross::after {
+    transform: translateX(-50%) scaleY(1);
+}
+
+/* レスポンシブ (タブレット・スマホ) */
+@media (max-width: 768px) {
+    .header-inner {
+        justify-content: flex-end;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    #global-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+        z-index: 100;
+    }
+
+    #global-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        letter-spacing: 0.15em;
+    }
+}
+
+/* --- 6. ローディング画面 --- */
+.glass-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.loader-line {
+    height: 1px;
+    background: #ffffff;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* --- 7. フッター --- */
+.site-footer {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--line-color);
+    text-align: center;
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.footer-inner p {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-links {
+    margin-top: 0.5rem !important;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+}

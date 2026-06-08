@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ryusei Ethan Ueno</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- ▽ ここからOGP・SEOメタタグを追加 ▽ -->
+    <meta name="description" content="Get in touch with Ryusei Ethan Ueno for new conversations and connections.">
+    <meta name="author" content="Ryusei Ethan Ueno">
+
+    <meta property="og:title" content="Contact | Ryusei Ethan Ueno">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ryusei-ueno.github.io/website/contact.html">
+    <meta property="og:image" content="https://ryusei-ueno.github.io/website/assets/images/ogp.png">
+    <meta property="og:site_name" content="Ryusei Ethan Ueno">
+    <meta property="og:description" content="Get in touch with Ryusei Ethan Ueno for new conversations and connections.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ryuseiethanueno">
+
+    <!-- モバイルブラウザのUIカラーをサイトの背景色（ダーク）に合わせる -->
+    <meta name="theme-color" content="#0a0a0a">
+    <!-- Safari（iOS）などで電話番号や日付が勝手にリンク化・青文字化されるのを防ぐ -->
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
+    <!-- 検索エンジンに対するクローラーの巡回許可-->
+    <meta name="robots" content="index, follow">
+    <!-- このページの正規URL -->
+    <link rel="canonical" href="https://ryusei-ueno.github.io/website/contact.html">
+</head>
+<body>
+    <div id="loading-screen" class="glass-loader">
+        <div class="loader-line" id="loader-line"></div>
+    </div>
+    <div class="bg-lines"></div>
+    <div id="mouse-glow"></div>
+
+    <header class="glass-header">
+        <div class="header-inner">
+            <button id="menu-btn" class="menu-btn" aria-label="Menu">
+                <span class="shape-square"></span>
+                <span class="shape-cross"></span>
+            </button>
+            <nav id="global-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="contact-section glass-panel">
+            <div class="contact-header">
+                <h1 class="section-title">Get in Touch</h1>
+                <p class="contact-desc">
+                    I am always open to new conversations and connections. Please feel free to drop a message below.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://bsky.app/profile/ryuseiethanueno.bsky.social" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Bluesky">
+                        <svg viewBox="0 -1 16 16" width="22" height="22" fill="currentColor">
+                            <path d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/ryuseiethanueno" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="external-profiles">
+                    <a href="https://orcid.org/0009-0003-1010-660X" target="_blank" rel="noopener noreferrer" class="profile-badge">
+                        <span class="badge-title">ORCID</span>
+                        <span class="badge-subtitle">Global Academic Profile</span>
+                    </a>
+                    <a href="https://researchmap.jp/ryusei_ueno" target="_blank" rel="noopener noreferrer" class="profile-badge">
+                        <span class="badge-title">Researchmap</span>
+                        <span class="badge-subtitle">Japanese Database</span>
+                    </a>
+                </div>
+            </div>
+
+            <form action="https://formspree.io/f/xwvzgrdw" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Inquiry about...">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-line"></span>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Ryusei Ethan Ueno. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

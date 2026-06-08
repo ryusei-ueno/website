@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Ryusei Ethan Ueno</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- モバイルブラウザのUIカラーをサイトの背景色（ダーク）に合わせる -->
+    <meta name="theme-color" content="#0a0a0a">
+    <!-- Safari（iOS）などで電話番号や日付が勝手にリンク化・青文字化されるのを防ぐ -->
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
+    <!-- エラーページは検索エンジンにインデックスさせない -->
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+    <div id="loading-screen" class="glass-loader">
+        <div class="loader-line" id="loader-line"></div>
+    </div>
+    <div class="bg-lines"></div>
+    <div id="mouse-glow"></div>
+
+    <header class="glass-header">
+        <div class="header-inner">
+            <button id="menu-btn" class="menu-btn" aria-label="Menu">
+                <span class="shape-square"></span>
+                <span class="shape-cross"></span>
+            </button>
+            <nav id="global-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="display: flex; justify-content: center; align-items: center; min-height: 60vh; text-align: center;">
+        <section class="glass-panel" style="max-width: 600px; width: 100%; padding: 4rem 2rem;">
+            <h1 style="font-size: 4rem; margin: 0; color: #fff; letter-spacing: 0.1em; font-weight: 300;">404</h1>
+            <h2 style="font-size: 1.2rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; font-weight: 400;">
+                Oops! The page you're looking for doesn't exist.
+            </h2>
+            <p style="color: rgba(255,255,255,0.6); margin-bottom: 3rem; font-size: 0.95rem;">
+                The link might be broken, or the page may have been removed.
+            </p>
+            <a href="index.html" class="btn-linear">Return to Home</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Ryusei Ethan Ueno. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

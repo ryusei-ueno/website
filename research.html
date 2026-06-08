@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Ryusei Ethan Ueno</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/research.css">
+
+    <!-- ▽ ここからOGP・SEOメタタグを追加 ▽ -->
+    <meta name="description" content="Academic output and field notes exploring the intersections of society, queer identities, and unconventional communities.">
+    <meta name="author" content="Ryusei Ethan Ueno">
+
+    <meta property="og:title" content="Research | Ryusei Ethan Ueno">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ryusei-ueno.github.io/website/research.html">
+    <meta property="og:image" content="https://ryusei-ueno.github.io/website/assets/images/ogp.png">
+    <meta property="og:site_name" content="Ryusei Ethan Ueno">
+    <meta property="og:description" content="Academic output and field notes exploring the intersections of society, queer identities, and unconventional communities.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ryuseiethanueno">
+
+    <!-- モバイルブラウザのUIカラーをサイトの背景色（ダーク）に合わせる -->
+    <meta name="theme-color" content="#0a0a0a">
+    <!-- Safari（iOS）などで電話番号や日付が勝手にリンク化・青文字化されるのを防ぐ -->
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
+    <!-- 検索エンジンに対するクローラーの巡回許可-->
+    <meta name="robots" content="index, follow">
+    <!-- このページの正規URL -->
+    <link rel="canonical" href="https://ryusei-ueno.github.io/website/research.html">
+</head>
+<body>
+    <div id="loading-screen" class="glass-loader">
+        <div class="loader-line" id="loader-line"></div>
+    </div>
+    <div class="bg-lines"></div>
+    <div id="mouse-glow"></div>
+
+    <header class="glass-header">
+        <div class="header-inner">
+            <button id="menu-btn" class="menu-btn" aria-label="Menu">
+                <span class="shape-square"></span>
+                <span class="shape-cross"></span>
+            </button>
+            <nav id="global-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="research.html" class="nav-link active">Research</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="research-header glass-panel" style="margin-top: 4rem; padding: 2rem 3rem;">
+            <h1 class="section-title">Research & Thoughts</h1>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-top: 0.5rem;">
+                Exploring the intersections of society, queer identities, and communities.
+            </p>
+            
+            <div class="view-toggle">
+                <button class="toggle-btn active" data-target="academic-view">Academic Output</button>
+                <button class="toggle-btn" data-target="fieldnotes-view">Field Notes (Blog)</button>
+            </div>
+        </section>
+
+        <div id="academic-view" class="view-section active">
+            <div id="academic-content"></div>
+        </div>
+
+        <div id="fieldnotes-view" class="view-section">
+            <div id="fieldnotes-list"></div>
+            <div id="fieldnotes-single" style="display: none;">
+                <button id="back-to-notes" class="toggle-btn" style="margin-bottom: 2rem;">← Back to Notes</button>
+                <div id="markdown-content" class="markdown-body glass-panel" style="padding: 3rem;"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Ryusei Ethan Ueno. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/research.js"></script>
+</body>
+</html>
